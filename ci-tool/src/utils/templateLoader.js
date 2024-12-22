@@ -1,9 +1,9 @@
-const fs = require("fs");
-const path = require("path");
+const { readFile } = require("./fileUtils");
+const findPath = require("./pathFinder");
 
 const templateLoader = (templateName, variables) => {
-  const templatePath = path.join(__dirname, "..", "templates", templateName);
-  let template = fs.readFileSync(templatePath, "utf8");
+  const templatePath = findPath([__dirname, "..", "templates", templateName]);
+  let template = readFile(templatePath);
   Object.keys(variables).forEach((key) => {
     const variable = variables[key];
     const regex = new RegExp(`{{${key}}}`, "g");
