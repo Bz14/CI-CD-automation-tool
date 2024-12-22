@@ -1,9 +1,18 @@
 const inquirer = require("inquirer");
 const { reactWorkflowPrompts } = require("../prompts/react-workflow-prompts");
-const { createReactWorkflow } = require("../workflows/react-workflow");
+const { createReactWorkflow } = require("../generate_workflow/react-workflow");
 
 const generateReactWorkflow = () => {
   const prompt = inquirer.createPromptModule();
+
+  prompt([
+    {
+      type: "list",
+      name: "language",
+      message: "Choose language for CI workflow:",
+    },
+  ]);
+
   prompt(reactWorkflowPrompts).then((answers) => {
     const { package_manager, node_version } = answers;
     createReactWorkflow({

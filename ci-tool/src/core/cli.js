@@ -5,7 +5,7 @@ const CLI = () => {
   program
     .version("0.0.1")
     .command("generate")
-    .description("Generate a CI workflow for React")
+    .description("Generate a CI workflow")
     .action(generateReactWorkflow)
     .parse(process.argv);
 };
