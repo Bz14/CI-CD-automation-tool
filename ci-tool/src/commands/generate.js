@@ -1,7 +1,6 @@
 const inquirer = require("inquirer");
-const workflows = require("../commands/main");
 const main_prompts = require("../prompts/main_prompt");
-
+const workflows = require("../commands/main");
 const generateWorkflow = () => {
   const prompt = inquirer.createPromptModule();
   prompt(main_prompts).then(({ language }) => {

@@ -13,6 +13,6 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ python_version }}
+          python-version: "{{python_version}}"
       - run: pip install -r requirements.txt
       - run: pytest

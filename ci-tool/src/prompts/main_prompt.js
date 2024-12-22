@@ -1,3 +1,4 @@
+const workflows = require("../commands/main");
 const main_prompts = [
   {
     type: "list",
