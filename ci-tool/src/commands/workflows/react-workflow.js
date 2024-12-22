@@ -1,4 +1,8 @@
-const reactWorkflow = {
+const {
+  createReactWorkflow,
+} = require("../../generate_workflow/react-workflow");
+
+module.exports = {
   name: "React",
   prompts: [
     {
@@ -15,6 +19,13 @@ const reactWorkflow = {
       default: "14",
     },
   ],
-};
 
-module.exports = { reactWorkflow };
+  createWorkflow: (answers) => {
+    const { package_manager, node_version } = answers;
+    createReactWorkflow({
+      template_name: "react-ci-workflow.yml",
+      package_manager,
+      node_version,
+    });
+  },
+};

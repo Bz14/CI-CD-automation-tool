@@ -1,4 +1,4 @@
-const pythonWorkflow = {
+module.exports = {
   name: "Python",
   prompts: [
     {
@@ -9,5 +9,3 @@ const pythonWorkflow = {
     },
   ],
 };
-
-module.exports = { pythonWorkflow };
