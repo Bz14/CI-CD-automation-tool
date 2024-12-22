@@ -1,3 +1,7 @@
+const {
+  createPythonWorkflow,
+} = require("../../generate_workflow/python-workflow");
+
 module.exports = {
   name: "Python",
   prompts: [
@@ -8,4 +12,11 @@ module.exports = {
       default: "3.9",
     },
   ],
+  createWorkflow: (answers) => {
+    const { python_version } = answers;
+    createPythonWorkflow({
+      template_name: "python-ci-workflow.yml",
+      python_version,
+    });
+  },
 };
