@@ -1,11 +1,3 @@
-// const templateLoader = require("./src/utils/templateLoader");
+const CLI = require("./src/core/cli");
 
-// console.log(
-//   templateLoader("react-ci-workflow.yml", {
-//     node_version: "14",
-//     package_manager: "npm",
-//   })
-// );
-
-const generateReactWorkflow = require("./src/commands/generate");
-generateReactWorkflow();
+CLI();
