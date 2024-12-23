@@ -1,3 +1,20 @@
+/**
+ * React CI workflow generator configuration.
+ *
+ * This module defines the setup for generating a CI workflow for a React application. It prompts the user
+ * for the package manager, Node version, and the working directory for the React project. Once the user
+ * provides this information, a CI workflow file is created.
+ *
+ * **Prompts:**
+ * 1. `package_manager`: The package manager to use (`npm` or `yarn`). Defaults to `npm`.
+ * 2. `node_version`: The version of Node.js to use. Defaults to `14`.
+ * 3. `working_directory`: The working directory for the React project. Defaults to `app`.
+ *
+ * **Workflow Creation:**
+ * The `createWorkflow` function generates a React CI workflow YAML file (`react-ci-workflow.yml`) using the
+ * provided inputs.
+ *
+ */
 const {
   createReactWorkflow,
 } = require("../../generate_workflow/react-workflow");

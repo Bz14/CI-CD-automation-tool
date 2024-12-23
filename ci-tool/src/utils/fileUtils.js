@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const logger = require("./logger");
 /**
  * Utility module for handling file operations such as writing and reading files.
  *
@@ -43,19 +44,28 @@ const path = require("path");
  * -------------
  * - `fs`: Node.js module for file system operations.
  * - `path`: Node.js module for handling file and directory paths.
+ *
  */
 
 const writeFile = (filePath, content) => {
   const dir = path.dirname(filePath);
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+  try {
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    fs.writeFileSync(filePath, content, "utf8");
+    logger.success(`File saved: ${filePath}`);
+  } catch (err) {
+    logger.error(`Error saving file: ${err.message}`);
   }
-  fs.writeFileSync(filePath, content, "utf8");
-  console.log(`File saved: ${filePath}`);
 };
 
 const readFile = (filePath) => {
-  return fs.readFileSync(filePath, "utf8");
+  try {
+    return fs.readFileSync(filePath, "utf8");
+  } catch (err) {
+    logger.error(`Error reading file: ${err.message}`);
+  }
 };
 
 module.exports = { writeFile, readFile };
