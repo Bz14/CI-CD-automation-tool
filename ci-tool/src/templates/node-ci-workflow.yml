@@ -1,0 +1,26 @@
+name: Node CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  install_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "{{node_version}}"
+
+      - name: Install Dependencies
+        run: |
+          {{package_manager}} install
+
+      - name: Run Tests
+        run: |
+          {{package_manager}} test
