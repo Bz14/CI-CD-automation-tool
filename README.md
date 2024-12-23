@@ -30,7 +30,9 @@ npm install
 
 Make sure you have [Node.js](https://nodejs.org/) installed on your machine. You can check if it's installed by running:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`  bashCopy codenode -v  `
+```bash
+node -v
+```
 
 If not installed, download and install it from the official website.
 
@@ -38,7 +40,9 @@ If not installed, download and install it from the official website.
 
 To generate a CI/CD workflow, use the following command:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`  bashCopy codenode ci-tool/index.js generate  `
+```bash
+node ci-tool/index.js generate
+```
 
 ### Steps for generating workflows:
 
@@ -53,7 +57,16 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 
 ### Example Usage:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`  bashCopy code$ node ci-tool/index.js generate  ? Select your environment: Node.js  ? Select a package manager: npm  ? Enter the Node version: 14  ? Enter the working directory for your Node project: app  Creating Node.js CI workflow...  ✔ Node.js workflow created successfully at ci-tool/generated/node-ci-workflow.yml  `
+```bash
+$ node ci-tool/index.js generate
+? Select your environment: Node.js
+? Select a package manager: npm
+? Enter the Node version: 14
+? Enter the working directory for your Node project: app
+
+Creating Node.js CI workflow...
+✔ Node.js workflow created successfully at ci-tool/generated/node-ci-workflow.yml
+```
 
 ## Features
 
@@ -83,4 +96,6 @@ Contributions to this project are welcome! If you have suggestions, bug fixes, o
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML``  sqlCopy code  You can copy and paste the above code into your `README.md` file. Let me know if you need an  ``
+```bash
+You can copy and paste the above code into your `README.md` file. Let me know if you need any further modifications!
+```
