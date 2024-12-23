@@ -11,7 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "chalk": "^5.4.0",
+    "chalk": "^4.1.2",
     "ci-tool": "file:",
     "commander": "^12.1.0",
     "fs-extra": "^11.2.0",

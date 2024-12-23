@@ -1,4 +1,4 @@
-import chalk from "chalk";
+const chalk = require("chalk");
 /**
  * Logger utility module using Chalk for styled console output.
  *
@@ -71,4 +71,4 @@ const logger = {
   },
 };
 
-export default logger;
+module.exports = logger;
