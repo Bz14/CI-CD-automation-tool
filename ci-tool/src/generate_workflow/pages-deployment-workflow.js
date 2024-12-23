@@ -1,20 +1,21 @@
 const loadTemplate = require("../utils/templateLoader");
 const findPath = require("../utils/pathFinder");
 const { writeFile } = require("../utils/fileUtils");
-const createNodeWorkflow = (config) => {
-  const { template_name, package_manager, node_version } = config;
-  const nodeWorkFlowTemplate = loadTemplate(template_name, {
+const createPagesDeploymentWorkflow = (config) => {
+  const { template_name, package_manager, node_version, working_directory } =
+    config;
+  const reactWorkFlowTemplate = loadTemplate(template_name, {
     package_manager,
     node_version,
+    working_directory,
   });
   const filePath = findPath([
     process.cwd(),
-    "..",
     ".github",
     "workflows",
-    "node-ci-workflow.yml",
+    "react-ci-deploy-workflow.yml",
   ]);
-  writeFile(filePath, nodeWorkFlowTemplate);
+  writeFile(filePath, reactWorkFlowTemplate);
 };
 
-module.exports = { createNodeWorkflow };
+module.exports = { createPagesDeploymentWorkflow };
