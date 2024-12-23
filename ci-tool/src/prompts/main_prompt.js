@@ -1,4 +1,7 @@
 const workflows = require("../commands/main");
+/**
+ * Main prompts for the CLI tool.
+ */
 const main_prompts = [
   {
     type: "list",
