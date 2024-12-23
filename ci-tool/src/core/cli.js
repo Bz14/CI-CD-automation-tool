@@ -41,8 +41,8 @@ const CLI = () => {
     .version("0.0.1")
     .command("generate")
     .description("Generate a CI workflow")
-    .action(generateWorkflow)
-    .parse(process.argv);
+    .action(generateWorkflow);
+  program.parse(process.argv);
 };
 
 module.exports = CLI;
