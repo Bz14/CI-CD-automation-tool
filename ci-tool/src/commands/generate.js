@@ -25,6 +25,7 @@ const generateWorkflow = () => {
     .then(({ language }) => {
       const choice = workflows.find((workflow) => workflow.name === language);
       prompt(choice.prompts).then((answers) => {
+        console.log(`Creating ${choice.name} CI workflow...`);
         choice.createWorkflow(answers);
       });
     })
