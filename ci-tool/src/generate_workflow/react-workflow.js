@@ -11,6 +11,7 @@ const createReactWorkflow = (config) => {
   });
   const filePath = findPath([
     process.cwd(),
+    "..",
     ".github",
     "workflows",
     "react-ci-workflow.yml",

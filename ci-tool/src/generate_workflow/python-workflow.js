@@ -10,6 +10,7 @@ const createPythonWorkflow = (config) => {
   });
   const filePath = findPath([
     process.cwd(),
+    "..",
     ".github",
     "workflows",
     "python-ci-workflow.yml",
