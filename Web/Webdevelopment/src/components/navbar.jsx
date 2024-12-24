@@ -10,18 +10,19 @@ const Navbar = () => {
   };
 
   return (
+    <div className='bg-black'>
     <motion.div
-      className="flex justify-between items-center p-5 shadow-lg"
+      className="container flex justify-between items-center p-5 shadow-lg "
       initial="hidden"
       animate="visible"
       variants={navVariants}
       transition={{ duration: 0.5 }}
     >
       <div className="logo">
-        <h1 className="text-2xl font-bold text-white">CI/CD</h1>
+        <h1 className="text-2xl font-bold text-white">Easy CI/CD</h1>
       </div>
       <div className="hidden md:flex nav-components">
-        <ul className="flex list-none p-0 mx-10">
+        <ul className="flex list-none p-0">
           <li className="nav-component mx-4 ">
             <a href="#" className="text-white hover:text-blue-300 transition duration-300 text-xl">Home</a>
           </li>
@@ -63,6 +64,7 @@ const Navbar = () => {
         </div>
       )}
     </motion.div>
+    </div>
   );
 };
 
