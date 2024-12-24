@@ -11,6 +11,7 @@ const createPagesDeploymentWorkflow = (config) => {
   });
   const filePath = findPath([
     process.cwd(),
+    "..",
     ".github",
     "workflows",
     "react-ci-deploy-workflow.yml",

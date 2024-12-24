@@ -1,6 +1,7 @@
 const loadTemplate = require("../utils/templateLoader");
 const findPath = require("../utils/pathFinder");
 const { writeFile } = require("../utils/fileUtils");
+
 const createNodeWorkflow = (config) => {
   const { template_name, package_manager, node_version, working_directory } =
     config;
@@ -11,6 +12,7 @@ const createNodeWorkflow = (config) => {
   });
   const filePath = findPath([
     process.cwd(),
+    "..",
     ".github",
     "workflows",
     "node-ci-workflow.yml",
