@@ -1,3 +1,5 @@
+import Features from "./components/features"
+import GettingStarted from "./components/howToUse"
 import Landing from "./components/landing"
 import Navbar from "./components/navbar"
 
@@ -6,11 +8,10 @@ function App() {
 
   return (
     <>
-    <div className="bg-black">
-    <Navbar/>
-    <Landing/>
-    </div>
-      
+      <Navbar/>
+      <Landing/>
+      <Features/>
+      <GettingStarted/>
     </>
   )
 }
