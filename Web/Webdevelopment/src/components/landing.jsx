@@ -13,9 +13,9 @@ const Landing = () => {
   };
 
   return (
-    <div className="text-center p-5">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-b from-black via-darkBlue to-black text-white text-center p-5">
       <motion.h3
-        className="text-2xl font-bold"
+        className="text-4xl md:text-7xl font-bold"
         initial="hidden"
         animate="visible"
         variants={headingVariants}
@@ -24,7 +24,7 @@ const Landing = () => {
         Effortless CI/CD Automation for Developers
       </motion.h3>
       <motion.p
-        className="mt-4 text-lg"
+        className="mt-4 text-lg md:text-2xl max-w-3xl"
         initial="hidden"
         animate="visible"
         variants={paragraphVariants}
