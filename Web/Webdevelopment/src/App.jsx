@@ -1,4 +1,5 @@
 import Features from "./components/features"
+import Footer from "./components/footer"
 import GettingStarted from "./components/howToUse"
 import Landing from "./components/landing"
 import Navbar from "./components/navbar"
@@ -12,6 +13,7 @@ function App() {
       <Landing/>
       <Features/>
       <GettingStarted/>
+      <Footer/>
     </>
   )
 }
