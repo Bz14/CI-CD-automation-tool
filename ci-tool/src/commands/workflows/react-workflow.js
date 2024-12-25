@@ -19,37 +19,80 @@ const {
   createReactWorkflow,
 } = require("../../generate_workflow/react-workflow");
 
+const {
+  createPagesDeploymentWorkflow,
+} = require("../../generate_workflow/pages-deployment-workflow");
+
 module.exports = {
   name: "React",
-  prompts: [
+  types: [
     {
-      type: "list",
-      name: "package_manager",
-      message: "Select a package manager",
-      choices: ["npm", "yarn"],
-      default: "npm",
+      name: "React Simple workflow",
+      value: "react-ci",
+      prompts: [
+        {
+          type: "list",
+          name: "package_manager",
+          message: "Select a package manager",
+          choices: ["npm", "yarn"],
+          default: "npm",
+        },
+        {
+          type: "input",
+          name: "node_version",
+          message: "Enter the Node version:",
+          default: "14",
+        },
+        {
+          type: "input",
+          name: "working_directory",
+          message: "Enter the working directory for your React project:",
+          default: "app",
+        },
+      ],
+      createWorkflow: (answers) => {
+        const { package_manager, node_version, working_directory } = answers;
+        createReactWorkflow({
+          template_name: "react-ci-workflow.yml",
+          package_manager,
+          node_version,
+          working_directory,
+        });
+      },
     },
     {
-      type: "input",
-      name: "node_version",
-      message: "Enter the Node version:",
-      default: "14",
-    },
-    {
-      type: "input",
-      name: "working_directory",
-      message: "Enter the working directory for your React project:",
-      default: "app",
+      name: "React with deployment to GitHub Pages",
+      value: "react-deploy",
+      prompts: [
+        {
+          type: "list",
+          name: "package_manager",
+          message: "Select a package manager",
+          choices: ["npm", "yarn"],
+          default: "npm",
+        },
+        {
+          type: "input",
+          name: "node_version",
+          message: "Enter the Node version:",
+          default: "14",
+        },
+        {
+          type: "input",
+          name: "working_directory",
+          message: "Enter the working directory for your React project:",
+          default: "app",
+        },
+      ],
+      createWorkflow: (answers) => {
+        const { package_manager, node_version, working_directory } = answers;
+        createPagesDeploymentWorkflow({
+          template_name: "react-ci-deploy-workflow.yml",
+          package_manager,
+          node_version,
+          working_directory,
+        });
+      },
     },
   ],
-
-  createWorkflow: (answers) => {
-    const { package_manager, node_version, working_directory } = answers;
-    createReactWorkflow({
-      template_name: "react-ci-workflow.yml",
-      package_manager,
-      node_version,
-      working_directory,
-    });
-  },
 };

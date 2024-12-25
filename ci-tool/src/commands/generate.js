@@ -26,24 +26,38 @@ const generateWorkflow = () => {
   prompt(main_prompts)
     .then(({ language }) => {
       const choice = workflows.find((workflow) => workflow.name === language);
-      prompt(choice.prompts)
-        .then((answers) => {
-          console.log(`Creating ${choice.name} CI workflow...`);
-          choice.createWorkflow(answers);
-        })
-        .catch((error) => {
-          if (error.message.includes("Prompt closed")) {
-            console.log("\nPrompt closed by user. Exiting gracefully...");
-            process.exit(0);
-          } else {
-            console.error(
-              "An unexpected error occurred while generating the workflow."
-            );
-            process.exit(1);
-          }
-        });
+      prompt([
+        {
+          type: "list",
+          name: "workflowType",
+          message: `Choose a workflow type for ${language}:`,
+          choices: choice.types.map((type) => ({
+            name: type.name,
+            value: type,
+          })),
+        },
+      ]).then(({ workflowType }) => {
+        prompt(workflowType.prompts)
+          .then((answers) => {
+            console.log(`Creating ${choice.name} CI workflow...`);
+            workflowType.createWorkflow(answers);
+          })
+          .catch((error) => {
+            console.log(error);
+            if (error.message.includes("Prompt closed")) {
+              console.log("\nPrompt closed by user. Exiting gracefully...");
+              process.exit(0);
+            } else {
+              console.error(
+                "An unexpected error occurred while generating the workflow."
+              );
+              process.exit(1);
+            }
+          });
+      });
     })
     .catch((error) => {
+      console.log(error);
       if (error.message.includes("Prompt closed")) {
         console.log("\nPrompt closed by user. Exiting gracefully...");
         process.exit(0);
