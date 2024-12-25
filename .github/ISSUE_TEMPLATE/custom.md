@@ -1,6 +1,6 @@
 ---
-name: Custom issue template
-about: Describe this issue template's purpose here.
+name: Docmentation
+about: Add documentations to the project.
 title: ''
 labels: ''
 assignees: ''
