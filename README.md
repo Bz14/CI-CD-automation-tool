@@ -1,15 +1,22 @@
 # CI/CD Automation Tool
 
-This project is a command-line interface (CLI) tool for generating custom workflows for various development environments, including Node.js, React, Python, and GitHub Pages deployment. The tool allows users to quickly scaffold workflows based on their preferences (e.g., package manager, Node version, working directory, etc.).
+This project is a command-line interface (CLI) tool for generating custom workflows for various development environments, including Node.js, React and GitHub Pages deployment. The tool allows users to quickly integrate workflows based on their preferences (e.g., package manager, Node version, working directory, etc.).
 
 ## Table of Contents
 
+- [Project Overview](#overview)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
 - [Supported Workflows](#supported-workflows)
 - [Contributing](#contributing)
 - [License](#license)
+- [Contact](#contact)
+- [Acknowledgment](#acknowledgment)
+
+## Project Overview
+
+This CI/CD automation tool simplifies the setup of CI/CD pipelines by automating workflow generation. It guides users through a selection process to create customized workflows based on their project requirements.
 
 ## Installation
 
@@ -41,7 +48,7 @@ If not installed, download and install it from the official website.
 To generate a CI/CD workflow, use the following command:
 
 ```bash
-node ci-tool/index.js generate
+node ci-tool/index.js init
 ```
 
 ### Steps for generating workflows:
@@ -50,7 +57,7 @@ node ci-tool/index.js generate
 2.  **Select options**: Depending on the stack selected (e.g., Node.js, React, Python), you will be asked to choose different configuration options such as:
 
     - Package manager (npm or yarn)
-    - Version of Node.js or Python
+    - Version of Node.js
     - Working directory for your project
 
 3.  **Create the workflow**: Based on your responses, the tool will generate the appropriate configuration file for the selected stack.
@@ -58,7 +65,7 @@ node ci-tool/index.js generate
 ### Example Usage:
 
 ```bash
-$ node ci-tool/index.js generate
+$ node ci-tool/index.js init
 ? Select your environment: Node.js
 ? Select a package manager: npm
 ? Enter the Node version: 14
@@ -70,7 +77,7 @@ Creating Node.js CI workflow...
 
 ## Features
 
-- **Support for multiple technologies**: The tool supports creating CI/CD workflows for Node.js, React, Python, and GitHub Pages deployment.
+- **Support for multiple technologies**: The tool supports creating CI/CD workflows for Node.js, React, and GitHub Pages deployment.
 - **Customizable**: Allows users to choose configurations like package manager, versioning, and directory structure.
 - **Simple CLI interface**: Just run a single command and answer the prompts to generate workflows.
 
@@ -78,7 +85,6 @@ Creating Node.js CI workflow...
 
 - **Node.js**: Generate a Node.js CI workflow with the selected version and package manager (npm or yarn).
 - **React**: Generate a CI workflow for React applications.
-- **Python**: Generate a Python CI workflow with a specified Python version.
 - **GitHub Pages Deployment**: Generate a deployment workflow for React apps using GitHub Pages.
 
 ## Contributing
@@ -96,15 +102,14 @@ Contributions to this project are welcome! If you have suggestions, bug fixes, o
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-```bash
-You can copy and paste the above code into your `README.md` file. Let me know if you need any further modifications!
-```
 ## Contact
+
 For questions or feedback, please reach out to:
 
 - Eyerusalem Bezu - bezueyerusalem@gmail.com
 - GitHub: BZ14
 
 ## Acknowledgements
+
 - Inspired by various open-source projects and community contributions.
 - Special thanks to the contributors and users for their feedback and support.
