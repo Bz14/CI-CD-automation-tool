@@ -78,7 +78,6 @@ Creating Node.js CI workflow...
 
 - **Node.js**: Generate a Node.js CI workflow with the selected version and package manager (npm or yarn).
 - **React**: Generate a CI workflow for React applications.
-- **Python**: Generate a Python CI workflow with a specified Python version.
 - **GitHub Pages Deployment**: Generate a deployment workflow for React apps using GitHub Pages.
 
 ## Contributing
@@ -100,7 +99,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 You can copy and paste the above code into your `README.md` file. Let me know if you need any further modifications!
 ```
 ## Contact
-For questions or feedback, please reach out to:
+For questions or feedback, please reach out to: bezueyerusalem@gmail.com
 
 - Eyerusalem Bezu - bezueyerusalem@gmail.com
 - GitHub: BZ14
