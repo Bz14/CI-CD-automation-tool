@@ -28,7 +28,7 @@ const steps = [
 
 const GettingStarted = () => {
   return (
-    <section className="py-10 bg-gradient-to-b from-black via-darkBlue to-black">
+    <section id='howToUse' className="py-10 bg-gradient-to-b from-black via-darkBlue to-black">
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-4xl font-bold text-center mb-6 text-white"
@@ -74,9 +74,14 @@ const GettingStarted = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: steps.length * 0.2 }}
         >
-          <button className="bg-blue-500 text-white py-2 px-4 rounded">
-            Start Now
-          </button>
+          <a
+            href="https://github.com/Bz14/CI-CD-automation-tool/blob/main/CONTRIBUTING.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 text-white py-2 px-4 rounded-2xl mt-8 mb-6"
+          >
+            Get Involved
+          </a>
         </motion.div>
       </div>
     </section>
