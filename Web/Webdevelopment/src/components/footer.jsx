@@ -21,8 +21,8 @@ const Footer = () => {
     {
       title: 'How to Use',
       links: [
-        { href: '', label: 'Steps' },
-        { href: '', label: 'Examples' },
+        { href: '#howToUse', label: 'Steps' },
+        { href: '#howToUse', label: 'Examples' },
       ],
     },
   ];

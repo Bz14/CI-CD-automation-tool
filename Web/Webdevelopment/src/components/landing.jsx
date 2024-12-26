@@ -13,7 +13,7 @@ const Landing = () => {
   };
 
   return (
-    <div className='bg-gradient-to-b from-black via-darkBlue to-black'>
+    <div id='#landing' className='bg-gradient-to-b from-black via-darkBlue to-black'>
     <div className="container flex flex-col justify-center items-center min-h-screen bg-gradient-to-b from-black via-darkBlue to-black text-white text-center p-5">
       <motion.h3
         className="text-4xl md:text-7xl font-bold"
@@ -33,6 +33,14 @@ const Landing = () => {
       >
         Transform the way you build and deploy software with our intuitive tool that simplifies CI/CD workflows.
       </motion.p>
+      <a
+            href="https://github.com/Bz14/CI-CD-automation-tool/blob/main/CONTRIBUTING.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 text-white py-2 px-4 rounded-2xl mt-5"
+          >
+            Get Involved
+          </a>
     </div>
     </div>
   );

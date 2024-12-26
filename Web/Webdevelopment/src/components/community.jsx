@@ -18,7 +18,7 @@ const developers = [
 
 const Community = () => {
   return (
-    <section className="py-10 bg-gradient-to-b from-black via-darkBlue to-black">
+    <section id='community' className="py-10 bg-gradient-to-b from-black via-darkBlue to-black">
       <div className="container mx-auto px-4 text-center">
         <motion.h2
           className="text-4xl font-bold mb-6 text-white"
