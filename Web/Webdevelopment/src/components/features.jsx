@@ -5,7 +5,7 @@ const Features = () => {
     {
       title: 'Automated Workflow Generation',
       description: 'Eliminate manual configurations with our intelligent automation that generates workflows tailored to your project needs.',
-      icon: '🔄', // Placeholder for an icon
+      icon: '🔄', 
     },
     {
       title: 'Framework Agnostic',
