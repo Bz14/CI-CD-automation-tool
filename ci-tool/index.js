@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
  * Entry point of the application
  */

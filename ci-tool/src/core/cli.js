@@ -39,7 +39,7 @@ const generateWorkflow = require("../commands/generate");
 const CLI = () => {
   program
     .version("0.0.1")
-    .command("generate")
+    .command("init")
     .description("Generate a CI workflow")
     .action(generateWorkflow);
   program.parse(process.argv);
