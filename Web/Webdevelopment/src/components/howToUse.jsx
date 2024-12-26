@@ -1,34 +1,38 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const steps = [
   {
-    title: 'Step 1: Installation',
-    description: 'Use the following command to install the CI/CD Automation Tool:',
-    code: 'npx ci-tool init',
-    icon: '🔧',
+    title: "Step 1: Installation",
+    description:
+      "Use the following command to install the CI/CD Automation Tool:",
+    code: "npm install ci-cd_tool",
+    icon: "🔧",
   },
   {
-    title: 'Step 2: Generate Configuration',
-    description: 'Run the command to generate your CI/CD workflow files:',
-    code: 'ci-tool generate',
-    icon: '⚙️',
+    title: "Step 2: Generate Configuration",
+    description: "Run the command to generate your CI/CD workflow files:",
+    code: "npx ci-cd_tool init",
+    icon: "⚙️",
   },
   {
-    title: 'Step 3: Customize Your Pipeline',
-    description: 'Specify options like Node.js version and package manager:',
-    icon: '🛠️',
+    title: "Step 3: Customize Your Pipeline",
+    description: "Specify options like Node.js version and package manager:",
+    icon: "🛠️",
   },
   {
-    title: 'Step 4: Validate Your Setup',
-    description: 'Optionally validate your configuration before deployment.',
-    icon: '✅',
+    title: "Step 4: Validate Your Setup",
+    description: "Optionally validate your configuration before deployment.",
+    icon: "✅",
   },
 ];
 
 const GettingStarted = () => {
   return (
-    <section id='howToUse' className="py-10 bg-gradient-to-b from-black via-darkBlue to-black">
+    <section
+      id="howToUse"
+      className="py-10 bg-gradient-to-b from-black via-darkBlue to-black"
+    >
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-4xl font-bold text-center mb-6 text-white"
@@ -44,7 +48,8 @@ const GettingStarted = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Follow these simple steps to set up your CI/CD pipeline and streamline your development process.
+          Follow these simple steps to set up your CI/CD pipeline and streamline
+          your development process.
         </motion.p>
         <div className="grid md:grid-cols-2 gap-8">
           {steps.map((step, index) => (
@@ -57,9 +62,11 @@ const GettingStarted = () => {
             >
               <div className="flex-1 md:flex-2 items-center mb-4">
                 <span className="text-2xl mr-2">{step.icon}</span>
-                <h3 className="text-xl font-semibold text-white">{step.title}</h3>
+                <h3 className="text-xl font-semibold text-white">
+                  {step.title}
+                </h3>
               </div>
-              <p className='text-white'>{step.description}</p>
+              <p className="text-white">{step.description}</p>
               {step.code && (
                 <pre className="bg-gray-200 p-2 rounded mt-2">
                   <code>{step.code}</code>

@@ -1,24 +1,27 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import elsabeth from '../assets/el.jpg';
-import mohamed from '../assets/mo.jpg';
-import eyerus from '../assets/ey.jpg';
-import eb from '../assets/eb.png';
-import eden from '../assets/eden.jpg';
-import etsub from '../assets/etsub.jpg';
+import React from "react";
+import { motion } from "framer-motion";
+import elsabeth from "../assets/el.jpg";
+import mohamed from "../assets/mo.jpg";
+import eyerus from "../assets/ey.jpg";
+import eb from "../assets/eb.png";
+import eden from "../assets/eden.jpg";
+import etsub from "../assets/etsub.jpg";
 
 const developers = [
-  { src: eyerus, name: 'Eyerusalem Bezu' },
-  { src: elsabeth, name: 'Elsabeth Zeleke' },
-  { src: eden, name: 'Eden Nekr' },
-  { src: eb, name: 'Fkreyohannes' },
-  { src: etsub, name: 'Etsub Tilahun' },
-  { src: mohamed, name: 'Mohamed Hashem' },
+  { src: eyerus, name: "Eyerusalem Bezu" },
+  { src: elsabeth, name: "Elsabeth Zeleke" },
+  { src: eden, name: "Eden Nekr" },
+  { src: eb, name: "Fikreyohannes Gizachew" },
+  { src: etsub, name: "Etsub Tilahun" },
+  { src: mohamed, name: "Mohamed Hashem" },
 ];
 
 const Community = () => {
   return (
-    <section id='community' className="py-10 bg-gradient-to-b from-black via-darkBlue to-black">
+    <section
+      id="community"
+      className="py-10 bg-gradient-to-b from-black via-darkBlue to-black"
+    >
       <div className="container mx-auto px-4 text-center">
         <motion.h2
           className="text-4xl font-bold mb-6 text-white"
@@ -34,17 +37,18 @@ const Community = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Your ideas and contributions can help make this project even better for everyone!
+          Your ideas and contributions can help make this project even better
+          for everyone!
         </motion.p>
 
         <div className="overflow-hidden">
           <motion.div
             className="flex animate-scroll"
             initial={{ x: 0 }}
-            animate={{ x: '-100%' }}
+            animate={{ x: "-100%" }}
             transition={{
               duration: 30,
-              ease: 'linear',
+              ease: "linear",
               repeat: Infinity,
             }}
           >
