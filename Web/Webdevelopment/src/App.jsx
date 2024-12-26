@@ -1,3 +1,4 @@
+import Community from "./components/community"
 import Features from "./components/features"
 import Footer from "./components/footer"
 import GettingStarted from "./components/howToUse"
@@ -13,7 +14,9 @@ function App() {
       <Landing/>
       <Features/>
       <GettingStarted/>
+      <Community/>
       <Footer/>
+      
     </>
   )
 }
