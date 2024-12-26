@@ -99,3 +99,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ```bash
 You can copy and paste the above code into your `README.md` file. Let me know if you need any further modifications!
 ```
+## Contact
+For questions or feedback, please reach out to:
+
+- Eyerusalem Bezu - bezueyerusalem@gmail.com
+- GitHub: BZ14
+
+## Acknowledgements
+- Inspired by various open-source projects and community contributions.
+- Special thanks to the contributors and users for their feedback and support.
