@@ -1,19 +1,26 @@
 {
-  "name": "ci-tool",
+  "name": "ci-cd_tool",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "dev": "nodemon index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "CI/CD"
+  ],
   "author": "",
-  "license": "ISC",
-  "description": "",
+  "license": "MIT",
+  "description": "A simple CLI tool for CI/CD",
+  "bin": {
+    "ci-cd_tool": "./index.js"
+  },
   "dependencies": {
     "chalk": "^4.1.2",
-    "ci-tool": "file:",
+    "ci-cd_tool": "file:",
+    "ci-cd-tool": "file:",
     "commander": "^12.1.0",
+    "easy-ci-cd": "file:",
     "fs-extra": "^11.2.0",
     "inquirer": "^12.3.0",
     "js-yaml": "^4.1.0",

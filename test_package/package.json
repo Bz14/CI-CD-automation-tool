@@ -1,14 +1,17 @@
 {
-  "name": "ci-cd-automation-tool",
+  "name": "test",
   "version": "1.0.0",
-  "description": "CI/CD automation tool",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "ci-cd-automation-tool": "file:"
+    "ci-cd_tool": "^1.0.0",
+    "ci-cd-tool": "^1.0.0",
+    "test": "file:"
   }
 }
