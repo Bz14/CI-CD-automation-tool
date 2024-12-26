@@ -99,7 +99,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 You can copy and paste the above code into your `README.md` file. Let me know if you need any further modifications!
 ```
 ## Contact
-For questions or feedback, please reach out to: bezueyerusalem@gmail.com
+For questions or feedback, please reach out to:
 
 - Eyerusalem Bezu - bezueyerusalem@gmail.com
 - GitHub: BZ14
