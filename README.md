@@ -41,7 +41,7 @@ If not installed, download and install it from the official website.
 To generate a CI/CD workflow, use the following command:
 
 ```bash
-node ci-tool/index.js generate
+node ci-tool/index.js init
 ```
 
 ### Steps for generating workflows:
