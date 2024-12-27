@@ -87,6 +87,7 @@ const Community = () => {
         </div>
       </div>
     </section>
+    //WEBSITE FOR OUR CI/CD 
   );
 };
 
