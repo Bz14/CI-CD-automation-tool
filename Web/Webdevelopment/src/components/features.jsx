@@ -1,7 +1,7 @@
 import React from "react";
 import image1 from "../assets/1.jpg";
 import image2 from "../assets/2.jpg";
-import image3 from "../../dist/assets/3-BzhUk0K8.jpg";
+import image3 from "../assets/3.jpg";
 
 const Features = () => {
   const features = [
