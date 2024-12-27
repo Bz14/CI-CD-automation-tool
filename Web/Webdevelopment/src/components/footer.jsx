@@ -3,12 +3,13 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   const columns = [
-    {
+    { // our adress and  some info
       title: 'Contact',
       links: [
         { href: '', label: 'LinkedIn' },
         { href: 'https://github.com/Bz14/CI-CD-automation-tool', label: 'GitHub' },
         { href: '', label: 'Medium' },
+        
       ],
     },
     {
