@@ -28,22 +28,22 @@ jobs:
         uses: actions/checkout@v3
 
       - name: List files in docs
-        run: ls -la "./Web/Webdevelopment"
+        run: ls -la "./Webdevelopment"
 
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: "14"
           cache: "npm"
-          cache-dependency-path: "./Web/Webdevelopment/package-lock.json"
+          cache-dependency-path: "./Webdevelopment/package-lock.json"
 
       - name: Install dependencies
         run: npm install
-        working-directory: "./Web/Webdevelopment"
+        working-directory: "./Webdevelopment"
 
       - name: Build
         run: npm run build
-        working-directory: "./Web/Webdevelopment"
+        working-directory: "./Webdevelopment"
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -51,7 +51,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: "./Web/Webdevelopment/dist"
+          path: "./Webdevelopment/dist"
 
       - name: Deploy to GitHub Pages
         id: deployment
