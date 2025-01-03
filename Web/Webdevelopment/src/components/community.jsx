@@ -6,11 +6,12 @@ import eyerus from "../assets/ey.jpg";
 import eb from "../assets/eb.png";
 import eden from "../assets/eden.jpg";
 import etsub from "../assets/etsub.jpg";
+// Array of developer objects, each containing an image source and a name
 
 const developers = [
   { src: eyerus, name: "Eyerusalem Bezu" },
   { src: elsabeth, name: "Elsabeth Zeleke" },
-  { src: eden, name: "Eden Nekr" },
+  { src: eden, name: "Eden Neker" },
   { src: eb, name: "Fikreyohannes Gizachew" },
   { src: etsub, name: "Etsub Tilahun" },
   { src: mohamed, name: "Mohamed Hashem" },
@@ -30,6 +31,7 @@ const Community = () => {
           transition={{ duration: 0.5 }}
         >
           Join the Community
+          {/*Section heading with  some animation */} 
         </motion.h2>
         <motion.p
           className="text-lg mb-[50px] text-white"
@@ -40,7 +42,7 @@ const Community = () => {
           Your ideas and contributions can help make this project even better
           for everyone!
         </motion.p>
-
+        
         <div className="overflow-hidden">
           <motion.div
             className="flex animate-scroll"
@@ -85,6 +87,7 @@ const Community = () => {
         </div>
       </div>
     </section>
+    //WEBSITE FOR OUR CI/CD 
   );
 };
 
